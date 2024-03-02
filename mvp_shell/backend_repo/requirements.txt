@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+requests
+altair<5
+watchdog
+jupyter
+fastapi
+uvicorn
+docker
