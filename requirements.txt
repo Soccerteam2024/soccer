@@ -4,3 +4,4 @@ numpy
 requests
 altair<5
 watchdog
+jupyter
