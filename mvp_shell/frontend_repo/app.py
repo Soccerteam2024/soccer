@@ -9,14 +9,16 @@
 # url = 'https://containersoccer-7wfyzlyocq-oe.a.run.app/predict'
 
 # params = {
-#     'feature1': param1,  # 0 for Sunday, 1 for Monday, ...
-#     'feature2': param2
+#     'first_country_option': param1,  # 0 for Sunday, 1 for Monday, ...
+#     'second_country_option': param2,
+#     'friendly_game': param2,
+#     'neutral_game': param2
 # }
 # response = requests.get(url, params=params)
 
 # st.text(response.json())
 
-## newly added code
+# newly added code
 
 
 import streamlit as st
