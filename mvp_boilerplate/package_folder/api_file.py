@@ -71,3 +71,7 @@ if st.button('Submit'):
     st.write(result)  # result is now a dictionary, which should prevent the error
 else:
     st.write('Please make your selections and click submit to see the prediction.')
+
+
+
+
