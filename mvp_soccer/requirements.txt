@@ -5,5 +5,8 @@ uvicorn
 # Machine learning
 scikit-learn==1.3.1
 
+# Data
+pandas
+
 #.env
 python-dotenv

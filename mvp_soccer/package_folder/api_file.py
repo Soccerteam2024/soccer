@@ -1,9 +1,14 @@
 from fastapi import FastAPI
 import pandas as pd
-from mvp_soccer.ml_logic.data import feature_encoding
+import os
+from package_folder.data import feature_encoding
 import pickle
 
 api = FastAPI()
+
+# Calculate the path to the model file relative to this script's location
+dir_path = os.path.dirname(os.path.realpath(__file__))
+model_path = os.path.join(dir_path, '../models/soccer_model.pkl')  # Adjust the relative path as necessary
 
 # define a root `/` endpoint
 @api.get("/")
@@ -13,8 +18,13 @@ def index():
 
 @api.get("/predict")
 def predict(feature1, feature2, feature3, feature4):
-    filename = 'mvp_soccer/ml_logic/best_model/soccer_model.pkl'
-    model = pickle.load(open(filename, 'rb'))
+    with open(model_path, 'rb') as file:
+        model = pickle.load(file)
+    #filename = 'mvp_soccer/models/soccer_model.pkl'
+    # with open ('/Users/igor/code/soccer/mvp_soccer/models/soccer_model.pkl', 'rb') as file:
+    #with open ('../models/soccer_model.pkl', 'rb') as file:
+        #print(type(file))
+        # model = pickle.load(file)
     # Creating a new DataFrame for first Prediction
     new_result = pd.DataFrame(columns = ['home_team', 'away_team', 'friendly', 'neutral_encoded'])
     # Adding some content to the new DataFrame
