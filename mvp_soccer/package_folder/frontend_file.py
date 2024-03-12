@@ -1,13 +1,10 @@
-# response = requests.get(f"https://soccer4-tefknaii7q-ew.a.run.app/predict?feature1={1}&feature2={1}&feature3={1}&feature={1}").json()
-# st.write("The prediction is", str(response['prediction']))
 
-# Newly generated code:
 import streamlit as st
 import pandas as pd
 import numpy as np
 import requests
-from data import get_data
-from api_file import predict
+from package_folder.data import get_data
+from package_folder.api_file import predict
 
 # Fetching the countries data
 countries_data = get_data()
