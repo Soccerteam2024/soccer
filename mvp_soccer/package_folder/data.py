@@ -5,9 +5,14 @@ from sklearn.preprocessing import LabelEncoder
 
 def get_data():
     #Loading the dataset from a csv-file by using the relative path
-    path = "data/results.csv"
+    #print("enter get data func")
+    #path = "results.csv"
+    path = "package_folder/data/results.csv"
+    #print("read path")
     data = pd.read_csv(path)
+    #print("data")
     return data
+
 
 def data_preprocessing(data: pd.DataFrame):
     # Creating a new column "result" by transforming the results into "Win", "Lose" or "Draw"
