@@ -15,16 +15,11 @@ model_path = os.path.join(dir_path, '../models/soccer_model.pkl')  # Adjust the 
 def index():
     return {"ok": "API connected"}
 
-
 @api.get("/predict")
 def predict(feature1, feature2, feature3, feature4):
     with open(model_path, 'rb') as file:
         model = pickle.load(file)
-    #filename = 'mvp_soccer/models/soccer_model.pkl'
-    # with open ('/Users/igor/code/soccer/mvp_soccer/models/soccer_model.pkl', 'rb') as file:
-    #with open ('../models/soccer_model.pkl', 'rb') as file:
-        #print(type(file))
-        # model = pickle.load(file)
+
     # Creating a new DataFrame for first Prediction
     new_result = pd.DataFrame(columns = ['home_team', 'away_team', 'friendly', 'neutral_encoded'])
     # Adding some content to the new DataFrame
@@ -37,9 +32,4 @@ def predict(feature1, feature2, feature3, feature4):
     X_new_encoded = feature_encoding(new_result)
     prediction = model.predict(X_new_encoded)
 
-    # Here, I'm only returning the features, since I don't actually have a model.
-    # In a real life setting, you would return the predictions.
-
     return {'prediction': prediction[0]}
-
-#print(predict('Ghana', 'Germany', 0, 1))
