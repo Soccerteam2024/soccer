@@ -10,7 +10,7 @@ import requests
 # from api_file import predict
 
 # Fetching the countries data
-path = "package_folder/data/results.csv"
+path = "data/results.csv"
 #print("read path")
 
 countries_data = pd.read_csv(path)
