@@ -6,8 +6,18 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import requests
-from data import get_data
-from api_file import predict
+# from data import get_data
+# from api_file import predict
+
+def get_data():
+    #Loading the dataset from a csv-file by using the relative path
+    #print("enter get data func")
+    #path = "results.csv"
+    path = "package_folder/data/results.csv"
+    #print("read path")
+    data = pd.read_csv(path)
+    #print("data")
+    return data
 
 # Fetching the countries data
 countries_data = get_data()
