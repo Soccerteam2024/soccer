@@ -6,14 +6,15 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import requests
-from mvp_soccer.package_folder.data import get_data
-from mvp_soccer.package_folder.api_file import predict
+# from mvp_soccer.package_folder.data import get_data
+# from mvp_soccer.package_folder.api_file import predict
 
 # Fetching the countries data
-countries_data = get_data()
-home_teams = countries_data['home_team'].unique()
-away_teams = countries_data['away_team'].unique()
-
+# countries_data = get_data()
+# home_teams = countries_data['home_team'].unique()
+# away_teams = countries_data['away_team'].unique()
+home_teams = 'Germany'
+away_teams = 'Brazil'
 # Streamlit interface
 # Title
 st.title("Match Predictor")
