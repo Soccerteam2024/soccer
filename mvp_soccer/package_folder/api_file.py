@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 import pandas as pd
 import os
-from data import feature_encoding
+from package_folder.data import feature_encoding
 import pickle
 
 api = FastAPI()

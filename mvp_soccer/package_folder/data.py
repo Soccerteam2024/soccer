@@ -3,6 +3,7 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import LabelEncoder
 
 
+
 def get_data():
     #Loading the dataset from a csv-file by using the relative path
     #print("enter get data func")
