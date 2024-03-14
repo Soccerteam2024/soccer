@@ -6,11 +6,11 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import requests
-from mvp_soccer.package_folder.data import get_data
-from mvp_soccer.package_folder.api_file import predict
+
 
 # Fetching the countries data
-countries_data = get_data()
+path = "data/results.csv"
+countries_data =  pd.read_csv(path)
 home_teams = countries_data['home_team'].unique()
 away_teams = countries_data['away_team'].unique()
 
