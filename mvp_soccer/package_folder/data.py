@@ -1,6 +1,6 @@
 import pandas as pd
-from sklearn.preprocessing import OneHotEncoder
-from sklearn.preprocessing import LabelEncoder
+from preprocessing import OneHotEncoder
+from preprocessing import LabelEncoder
 
 
 def get_data():
