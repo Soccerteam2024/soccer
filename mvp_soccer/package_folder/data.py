@@ -7,7 +7,7 @@ def get_data():
     #Loading the dataset from a csv-file by using the relative path
     #print("enter get data func")
     #path = "results.csv"
-    path = "../data/results.csv"
+    path = "package_folder/data_folder/results.csv"
     #print("read path")
     data = pd.read_csv(path)
     #print("data")
