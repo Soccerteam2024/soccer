@@ -6,8 +6,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import requests
-from package_folder.data import get_data
-from package_folder.api_file import predict
+# from data import get_data
+path = "package_folder/data_folder/results.csv"
 
 
 # Fetching the countries data
