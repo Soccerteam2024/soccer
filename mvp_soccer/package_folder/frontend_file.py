@@ -6,8 +6,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import requests
-from soccer.mvp_soccer.package_folder.data import get_data
-from soccer.mvp_soccer.package_folder.api_file import predict
+from data import get_data
+# from api_file import predict
 
 # Fetching the countries data
 countries_data = get_data()
