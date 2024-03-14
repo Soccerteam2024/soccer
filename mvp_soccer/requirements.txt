@@ -12,3 +12,8 @@ numpy
 
 #.env
 python-dotenv
+
+
+#Things
+package_folder.data
+package_folder.api_file
