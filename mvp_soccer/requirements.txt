@@ -10,3 +10,6 @@ pandas
 
 #.env
 python-dotenv
+
+#Package Country
+pycountry
